@@ -23,6 +23,6 @@ if txt:
     for i in txt:
         if (i >= "A") and (i <= "Z"):
             s += chr(ord(i) + 32)
-        else:
+        else:œœ
             s += i
     print("manual,way2: " + s)
