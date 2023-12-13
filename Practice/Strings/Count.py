@@ -32,4 +32,3 @@ while i < len(txt):
         count += 1
     i += 1
 print("way2: ", count)
-

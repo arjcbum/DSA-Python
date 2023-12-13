@@ -24,6 +24,5 @@ txt = "h\te\tl\tl\to"
 txtArr = txt.split("\t")
 tabLength = 4
 newGroup = " " * (tabLength-1)
-s = ""
 newTxt = newGroup.join(txtArr)
-print("way3: ", newTxt)
+print("way2: ", newTxt)
