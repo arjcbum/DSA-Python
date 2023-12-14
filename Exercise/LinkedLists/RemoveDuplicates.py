@@ -32,25 +32,6 @@ class LinkedList:
                 temp = temp.next
             print(" -> ".join(values))
 
-    #   +===================================================+
-    #   |                  WRITE YOUR CODE HERE             |
-    #   | Description:                                      |
-    #   | - This method removes all nodes with duplicate    |
-    #   |   values from the linked list.                    |
-    #   | - It keeps track of seen values with a set.       |
-    #   | - If a value is repeated, it is skipped over by   |
-    #   |   changing the 'next' pointer of the previous     |
-    #   |   node, effectively removing the duplicate.       |
-    #   | - The list's length is adjusted for each removed  |
-    #   |   duplicate.                                      |
-    #   |                                                   |
-    #   | Tips:                                             |
-    #   | - We maintain a 'previous' node as a reference    |
-    #   |   to re-link the list when skipping duplicates.   |
-    #   | - The 'current' node iterates through the list.   |
-    #   | - The 'values' set holds unique items seen so far.|
-    #   +===================================================+
-
     def remove_duplicates(self):
         if self.head is None:
             return
@@ -67,16 +48,6 @@ class LinkedList:
                 pre = temp
                 new_set.add(temp.value)
                 temp = temp.next
-
-
-#  +=====================================================+
-#  |                                                     |
-#  |          THE TEST CODE BELOW WILL PRINT             |
-#  |              OUTPUT TO "USER LOGS"                  |
-#  |                                                     |
-#  |  Use the output to test and troubleshoot your code  |
-#  |                                                     |
-#  +=====================================================+
 
 
 def test_remove_duplicates(linked_list, expected_values):
