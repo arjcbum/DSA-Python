@@ -35,22 +35,20 @@ class DoublyLinkedList:
     def swap_pairs(self):
         if self.head is None or self.head.next is None:
             return None
-        before = self.head
-        temp = before.next
-        self.head = temp
-        while temp:
-            temp.prev = before.prev
-            before.next = temp.next
-            temp.next = before
-            before.prev = temp
-            if temp.prev:
-                temp.prev.next = temp.prev
-            before = before.next
-            temp = before.next
-
-
-
-
+        temp = self.head
+        self.head = temp.next
+        while temp and temp.next:
+            a = temp
+            b = temp.next
+            a.next = b.next
+            b.prev = a.prev
+            a.prev = b
+            b.next = a
+            temp = a.next
+            if temp:
+                temp.prev = a
+            if b.prev:
+                b.prev.next = b
 
 
 my_dll = DoublyLinkedList(1)
