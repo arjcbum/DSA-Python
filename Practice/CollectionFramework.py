@@ -119,3 +119,88 @@ print(popped_value)
 
 my_dict.update({'four': 4, 'five': 5})
 print(my_dict)
+
+
+# Array (from array module) -
+
+# Homogeneous data structures.
+# Fixed size and more memory efficient than lists.
+# Arrays have methods similar to lists.
+# Additionally, the fromlist() and tolist() methods are used to convert between lists and arrays.
+
+print("Array:")
+
+from array import array
+
+my_array = array('i', [1, 2, 3, 4, 5])
+print(my_array)
+
+my_array.append(6)
+print(my_array)
+
+my_array.extend([7, 8])
+print(my_array)
+
+my_array.remove(3)
+print(my_array)
+
+
+# Dequeue:
+
+# Double-ended queue.
+# Supports fast appends and pops from both ends.
+# Additional methods for deque include:
+#     appendleft(): Adds an element to the left end.
+#     extendleft(): Extends the deque by appending elements from another iterable to the left.
+#     popleft(): Removes and returns an element from the left end.
+#     rotate(): Rotates the deque by a specified number of steps.
+
+
+from collections import deque
+
+print("Dequeue:")
+
+my_deque = deque([1, 2, 3, 4, 5])
+print(my_deque)
+
+my_deque.appendleft(0)
+print(my_deque)
+
+my_deque.extendleft([-2, -1])
+print(my_deque)
+
+popped_value = my_deque.popleft()
+print(my_deque)
+
+my_deque.rotate(2)
+print(my_deque)
+
+
+# Collection module:
+
+# Additional methods for Counter, defaultdict, and OrderedDict.
+# most_common() for Counter.
+# default_factory setting for defaultdict.
+# move_to_end() for OrderedDict.
+
+print("Collection module:")
+
+from collections import Counter, defaultdict, OrderedDict
+
+my_counter = Counter([1, 1, 2, 3, 3, 3])
+print(my_counter)
+
+most_common = my_counter.most_common(2)
+print(most_common)
+
+my_defaultdict = defaultdict(int)
+print(my_defaultdict)
+
+my_defaultdict['one'] += 1
+print(my_defaultdict)
+
+my_ordered_dict = OrderedDict([('one', 1), ('two', 2), ('three', 3)])
+print(my_ordered_dict)
+
+my_ordered_dict.move_to_end('one')
+print(my_ordered_dict)
