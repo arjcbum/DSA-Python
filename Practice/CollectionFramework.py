@@ -90,3 +90,32 @@ print(intersection_set)
 
 difference_set = my_set.difference({4, 5, 6})
 print(difference_set)
+
+
+# Dictionaries:
+
+# Key-value pairs.
+# Efficient lookups using keys.
+# Dictionary comprehensions for creating dictionaries.
+
+print("Dictionaries:")
+my_dict = {'one': 1, 'two': 2, 'three': 3}
+print(my_dict)
+
+all_keys = my_dict.keys()
+print(all_keys)
+
+all_values = my_dict.values()
+print(all_values)
+
+all_items = my_dict.items()
+print(all_items)
+
+value_for_key = my_dict.get('two', 0)
+print(value_for_key)
+
+popped_value = my_dict.pop('three')
+print(popped_value)
+
+my_dict.update({'four': 4, 'five': 5})
+print(my_dict)
