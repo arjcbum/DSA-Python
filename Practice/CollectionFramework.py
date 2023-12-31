@@ -190,6 +190,13 @@ from collections import Counter, defaultdict, OrderedDict
 my_counter = Counter([1, 1, 2, 3, 3, 3])
 print(my_counter)
 
+strA = " My name is abhishek raj. What is your name?"
+my_counter2 = Counter(strA.split(' '))
+print(my_counter2)
+
+for i in my_counter2.items():
+    print(i[0], i[1])
+
 most_common = my_counter.most_common(2)
 print(most_common)
 
