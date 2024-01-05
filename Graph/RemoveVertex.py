@@ -33,7 +33,6 @@ class Graph:
             return True
         return False
 
-
     def remove_vertex(self, v):
         if v in self.adj_list.keys():
             for ele in self.adj_list[v]:

@@ -37,7 +37,6 @@ class Graph:
             return True
         return False
 
-
 my_graph = Graph()
 my_graph.add_vertex('A')
 my_graph.add_vertex('B')
