@@ -51,7 +51,6 @@ class MinHeap:
             return None
         if len(self.heap) == 1:
             return self.heap.pop()
-
         min_value = self.heap[0]
         self.heap[0] = self.heap.pop()
         self._sink_down(0)

@@ -56,7 +56,6 @@ class MaxHeap:
         self._sink_down(0)
         return max_heap
 
-
 myheap = MaxHeap()
 myheap.insert(95)
 myheap.insert(75)

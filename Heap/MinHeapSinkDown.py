@@ -25,7 +25,6 @@ class MinHeap:
 
     def _sink_down(self, index):
         min_index = index
-
         while True:
             left_child = self._left_child(index)
             right_child = self._right_child(index)

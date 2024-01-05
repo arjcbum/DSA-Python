@@ -28,7 +28,6 @@ class MaxHeap:
         while True:
             left_child = self._left_child(index)
             right_child = self._right_child(index)
-
             if left_child < len(self.heap):
                 if self.heap[max_index] < self.heap[left_child]:
                     max_index = left_child
