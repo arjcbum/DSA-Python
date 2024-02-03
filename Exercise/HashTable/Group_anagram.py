@@ -26,7 +26,7 @@ def group_anagrams(nList):
     myList = {}
     myResult = []
     for i in nList:
-        index = hash(i)
+        index = Nhash(i)
         if myList.get(index) is None:
             myList[index] = []
         myList[index].append(i)
