@@ -24,15 +24,12 @@ def Nhash(nStr):
 
 def group_anagrams(nList):
     myList = {}
-    myResult = []
     for i in nList:
         index = Nhash(i)
         if myList.get(index) is None:
             myList[index] = []
         myList[index].append(i)
-    for j in myList.items():
-        myResult.append(j[1])
-    return myResult
+    return list(myList.values())
 
 
 print("1st set:")
